@@ -1,0 +1,36 @@
+.cardButtonStyle {
+  all: unset;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 250px;
+  height: 250px;
+  text-transform: uppercase;
+  gap: 8px;
+
+  cursor: pointer;
+
+  &:hover {
+    box-shadow: 12px 12px 12px rgba(0, 0, 0, 0.1), -10px -10px 10px white;
+    transition: box-shadow 1s;
+    span {
+      text-decoration: underline;
+      font-weight: bold;
+    }
+  }
+
+  &:active {
+    outline: none;
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.5s;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:focus-visible {
+    box-shadow: 12px 12px 12px rgba(0, 0, 0, 0.1), -10px -10px 10px white;
+  }
+}

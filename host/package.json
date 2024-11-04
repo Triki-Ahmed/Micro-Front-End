@@ -1,15 +1,16 @@
 {
-  "name": "remote",
+  "name": "host",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --port 5171 --strictPort",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview"
   },
   "dependencies": {
+    "@originjs/vite-plugin-federation": "^1.3.6",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },

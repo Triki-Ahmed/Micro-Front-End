@@ -1,6 +1,19 @@
+.grid {
+  display: grid;
+  grid-template-areas: 'cards content';
+  grid-template-columns: auto 1fr;
+}
+
+.content {
+  grid-area: content;
+}
+
+.cards {
+  grid-area: cards;
+  padding: 16px;
+}
+
 #root {
-  margin: 0 auto;
-  padding: 2rem;
   text-align: center;
 }
 

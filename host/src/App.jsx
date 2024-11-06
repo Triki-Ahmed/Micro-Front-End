@@ -20,37 +20,33 @@ function App() {
       case 'vue':
         return <VueApp />;
       default:
-        return '';
+        return 'Host : React App';
     }
   };
 
   return (
-    <div>
-      <h1>Poc Micro Front</h1>
-      <div
-        style={{
-          display: 'flex',
-          justifyContent: 'center',
-          alignItems: 'center',
-          gap: 60,
-          height: '100%',
-        }}
-      >
-        <CardButton onClick={() => setShowReactApp('react')}>
-          <img src={reactLogo} alt='react' width={60} />
-          <span>React</span>
-        </CardButton>
-        <CardButton onClick={() => setShowReactApp('angular')}>
-          <img src={angularLogo} alt='angular' width={60} />
-          <span>Angular</span>
-        </CardButton>
-        <CardButton onClick={() => setShowReactApp('vue')}>
-          <img src={vueLogo} alt='vue' width={60} />
-          <span>Vue</span>
-        </CardButton>
+    <div className='grid'>
+      <div className='cards'>
+        <div className='allCards'>
+          <CardButton onClick={() => setShowReactApp('react')}>
+            <img src={reactLogo} alt='react' width={60} />
+            <span>React</span>
+          </CardButton>
+          <CardButton onClick={() => setShowReactApp('angular')}>
+            <img src={angularLogo} alt='angular' width={60} />
+            <span>Angular</span>
+          </CardButton>
+          <CardButton onClick={() => setShowReactApp('vue')}>
+            <img src={vueLogo} alt='vue' width={60} />
+            <span>Vue</span>
+          </CardButton>
+        </div>
       </div>
 
-      {showByApp()}
+      <div className='content'>
+        <h1>Poc Micro Front-End</h1>
+        {showByApp()}
+      </div>
     </div>
   );
 }

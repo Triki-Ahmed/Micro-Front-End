@@ -7,7 +7,7 @@ export default defineConfig({
   plugins: [
     vue(),
     federation({
-      name: 'viteApp',
+      name: 'vueApp',
       filename: 'remoteEntry.js',
       exposes: {
         './AppVue': './src/boot.ts',
@@ -16,9 +16,8 @@ export default defineConfig({
     }),
   ],
   build: {
-    modulePreload: false,
     target: 'esnext',
     minify: false,
-    cssCodeSplit: true,
+    cssCodeSplit: false,
   },
 });
